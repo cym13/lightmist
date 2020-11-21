@@ -34,3 +34,8 @@ Usage
 
     $ WINEPATH="$(winepath -w "dmd2/windows/bin")" \
         wine dmd.exe -m32 -J=. lightmist.d
+
+License
+-------
+
+Copyright 2020 Cédric Picard - MIT License
